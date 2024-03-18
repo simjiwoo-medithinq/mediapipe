@@ -1,0 +1,8 @@
+0001-Yocto-patches.patch -p1
+0001-Fix-opencv-ffmpeg-library-paths.patch -p1
+0002-Build-library.patch -p1
+0008-mediapipe-cpu-target.patch -p1
+0001-instruct-bazel-to-patch-libedgetpu.patch -p1
+0007-Bugfix-for-broken-cc-rules-upstream.patch -p1
+0001-Remove-MEDIAPIPE_OMIT_EGL_WINDOW_BIT-flag-and-autode.patch -p1
+hand_gesture_modify.patch -p1

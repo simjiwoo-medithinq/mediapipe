@@ -1,0 +1,82 @@
+package(default_visibility = ['//visibility:public'])
+
+filegroup(
+  name = 'gcc',
+  srcs = [
+    'recipe-sysroot-native/usr/bin/aarch64-poky-linux/aarch64-poky-linux-gcc',
+  ],
+)
+
+filegroup(
+  name = 'ar',
+  srcs = [
+    'recipe-sysroot-native/usr/bin/aarch64-poky-linux/aarch64-poky-linux-ar',
+  ],
+)
+
+filegroup(
+  name = 'ld',
+  srcs = [
+    'recipe-sysroot-native/usr/bin/aarch64-poky-linux/aarch64-poky-linux-ld',
+  ],
+)
+
+filegroup(
+  name = 'nm',
+  srcs = [
+    'recipe-sysroot-native/usr/bin/aarch64-poky-linux/aarch64-poky-linux-nm',
+  ],
+)
+
+filegroup(
+  name = 'objcopy',
+  srcs = [
+    'recipe-sysroot-native/usr/bin/aarch64-poky-linux/aarch64-poky-linux-objcopy',
+  ],
+)
+
+filegroup(
+  name = 'objdump',
+  srcs = [
+    'recipe-sysroot-native/usr/bin/aarch64-poky-linux/aarch64-poky-linux-objdump',
+  ],
+)
+
+filegroup(
+  name = 'strip',
+  srcs = [
+    'recipe-sysroot-native/usr/bin/aarch64-poky-linux/aarch64-poky-linux-strip',
+  ],
+)
+
+filegroup(
+  name = 'as',
+  srcs = [
+    'recipe-sysroot-native/usr/bin/aarch64-poky-linux/aarch64-poky-linux-as',
+  ],
+)
+
+filegroup(
+  name = 'compiler_pieces',
+  srcs = glob([
+    'recipe-sysroot-native/usr/include/**',
+    'recipe-sysroot-native/usr/lib/aarch64-poky-linux/**',
+    'recipe-sysroot-native/usr/lib/aarch64-poky-linux/gcc/**',
+    'recipe-sysroot-native/usr/libexec/aarch64-poky-linux/**',
+    'recipe-sysroot/usr/include/**',
+  ]),
+)
+
+filegroup(
+  name = 'compiler_components',
+  srcs = [
+    ':gcc',
+    ':ar',
+    ':ld',
+    ':nm',
+    ':objcopy',
+    ':objdump',
+    ':strip',
+    ':as',
+  ],
+)
